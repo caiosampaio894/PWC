@@ -1,6 +1,5 @@
 import java.util.Scanner;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+
 
 public class Fluxo {
 
@@ -30,8 +29,8 @@ public class Fluxo {
         }
 
         // Exibição dos resultados
-        System.out.println("Nome da rua: " + nomeRua);
-        System.out.println("Número da rua: " + numeroRua);
+        String str = String.format("{\"" + nomeRua + "\", " + "\"" + numeroRua + "\""  + "}");
+        System.out.println(str);
     }
 
 }
