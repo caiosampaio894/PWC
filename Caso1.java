@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 
-public class Fluxo {
+public class Caso1 {
 
     public static void main(String[] args) {
 
@@ -29,7 +29,7 @@ public class Fluxo {
         }
 
         // Exibição dos resultados
-        String str = String.format("{\"" + nomeRua + "\", " + "\"" + numeroRua + "\""  + "}");
+        String str = String.format("{\"" + nomeRua.trim() + "\", " + "\"" + numeroRua + "\""  + "}");
         System.out.println(str);
     }
 
