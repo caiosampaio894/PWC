@@ -22,6 +22,9 @@ public class Caso1e2 {
             nomeRua += enderecoCompleto.charAt(i);
         }
 
+        // Tirando espaço do nome da rua
+        nomeRua = nomeRua.trim();
+
         // Extração do número da rua
         String numeroRua = "";
         for (int i = indiceNumero; i < enderecoCompleto.length(); i++) {
@@ -29,8 +32,7 @@ public class Caso1e2 {
         }
 
         // Exibição dos resultados
-        String str = String.format("{\"" + nomeRua.trim() + "\", " + "\"" + numeroRua + "\""  + "}");
-        System.out.println(str);
+        System.out.println("{\"" + nomeRua + "\", \"" + numeroRua + "\"}");
     }
 
 }
