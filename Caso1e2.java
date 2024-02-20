@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 
-public class Caso1 {
+public class Caso1e2 {
 
     public static void main(String[] args) {
 
