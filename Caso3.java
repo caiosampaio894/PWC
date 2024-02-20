@@ -18,7 +18,7 @@ public class Caso3 {
         String nomeRua = "";
 
         // Caso Rua Americana
-        if(posicaoVirgula == -1) {
+        if(contarEspacos(enderecoCompleto) < 3 && posicaoVirgula == -1) {
 
             // Extrair o número da rua
             if (posicaoEspaco > 0) {
@@ -76,5 +76,26 @@ public class Caso3 {
             System.out.println("{\"" + nomeRua + "\", \"" + numeroRua + "\"}");
         }
 
+        // Caso rua Colombiana
+        if(contarEspacos(enderecoCompleto) > 2 && posicaoVirgula == -1) {
+
+            // Encontrar o segundo espaço
+            int posicaoSegundoEspaco = enderecoCompleto.indexOf(' ', enderecoCompleto.indexOf(' ') + 1);
+
+            // Extrair a primeira parte da string
+            nomeRua = enderecoCompleto.substring(0, posicaoSegundoEspaco);
+
+            // Extrair a segunda parte da string
+            numeroRua = enderecoCompleto.substring(posicaoSegundoEspaco + 1);
+
+            System.out.println("{\"" + nomeRua + "\", \"" + numeroRua + "\"}");
+        }
+
+    }
+
+    // Contar o número de espaços
+    public static int contarEspacos(String str) {
+        String[] partes = str.split(" ");
+        return partes.length - 1;
     }
 }
