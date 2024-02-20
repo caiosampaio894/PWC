@@ -34,5 +34,13 @@ public class Caso3 {
                 System.out.println("{\"" + nomeRua + "\", \"" + numeroRua + "\"}");
             }
 
+        // Caso Rua Francesa
+        if (posicaoVirgula == 1) {
+            nomeRua = enderecoCompleto.substring(posicaoVirgula + 1).trim();
+            numeroRua = enderecoCompleto.substring(0, posicaoVirgula).trim();
+            System.out.println("{\"" + nomeRua + "\", \"" + numeroRua + "\"}");
+
+        }
+
     }
 }
